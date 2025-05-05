@@ -40,20 +40,3 @@ a {
     color-scheme: dark;
   }
 }
-
-:root {
-  --color-primary: #0A192F;      
-  --color-accent:  #64FFDA;      
-  --font-base:     'Inter', sans-serif;
-  --font-heading:  'Playfair Display', serif;
-  --spacing-sm:    8px;
-  --spacing-md:   16px;
-  --spacing-lg:   32px;
-}
-
-body {
-  margin: 0;
-  font-family: var(--font-base);
-  background: #fff;
-  color: var(--color-primary);
-}
