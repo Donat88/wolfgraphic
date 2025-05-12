@@ -1,0 +1,3 @@
+[build]
+  command = ""    # nincs build lépés
+  publish = "."   # a gyökérkönyvtárat szolgálja ki Netlify
