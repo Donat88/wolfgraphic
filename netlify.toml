@@ -1,3 +1,10 @@
+# netlify.toml
+
 [build]
-  command = ""    # nincs build lépés
-  publish = "."   # a gyökérkönyvtárat szolgálja ki Netlify
+  command = ""    # üres, nincs build lépés
+  publish = "."   # a gyökérkönyvtárat szolgálja ki (index.html stb.)
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+  [plugins.inputs]
+    skip = true   # ez teljesen lekapcsolja a Next.js plugint
