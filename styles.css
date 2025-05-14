@@ -3,10 +3,12 @@
 	margin: 0;
 	box-sizing: border-box;
 }
+/*
 #particles-js {
 	height: 100%;
 	overflow: visible;
 }
+	*/
 html {
 	font-size: 10px;
 	font-family: 'Jost', sans-serif;
@@ -179,13 +181,38 @@ p {
 /* End Header section */
 
 /* Hero Section */
+
 #hero {
-	background-image: url(/img/wg_background.jpg);
-	background-size: cover;
-	background-position: top center;
-	position: relative;
-	z-index: 0;
+  position: relative;      
+  width: 100%;
+  height: 100vh;            
+  background: url('/img/wg_background.jpg') center/cover no-repeat;
+  overflow: hidden;         
 }
+
+/* 2) A részecskék abszolút canvas-a */
+#particles-js {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;               /* háttérben legyen */
+}
+
+/* 3) A logó fölé */
+.logo-container {
+	pointer-events: none;
+  position: relative;
+  z-index: 1;               /* canvas fölött */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;             /* középre igazítja függőlegesen is */
+}
+.logo-container img {
+  width: 200px;             /* ízlés szerint állítsd */
+}
+
 
 #hero .hero {
   position: relative;  
