@@ -237,15 +237,17 @@ p {
 	background-color: #131e29;
 }
 #footer .footer {
-	min-height: 200px;
+	min-height: 100px;
 	flex-direction: column;
 	padding-top: 20px;
 	padding-bottom: 10px;
 }
-#footer .brand {
-	margin: 0;
-	padding: 0;
+#footer .brand img {
+  width: 50px;  
+  margin-top: 10px;
+  padding: 0;
 }
+
 /*
 #footer .social-icon {
 	display: flex;
