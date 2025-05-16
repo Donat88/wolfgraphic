@@ -53,7 +53,7 @@ p {
 	width: 200px;
 }
 
-/* Header section */
+
 #header {
 	position: fixed;
 	z-index: 1000;
@@ -178,9 +178,7 @@ p {
 #header .hamburger.active .bar::after {
 	top: 0;
 }
-/* End Header section */
 
-/* Hero Section */
 
 #hero {
   position: relative;      
@@ -195,27 +193,27 @@ p {
   background-color: #131e29;
   margin: 0;
 }
-/* 2) A részecskék abszolút canvas-a */
+
 #particles-js {
   position: absolute;
   top: 0; left: 0;
   width: 100%;
   height: 100%;
-  z-index: 0;               /* háttérben legyen */
+  z-index: 0;               
 }
 
-/* 3) A logó fölé */
+
 .logo-container {
 	pointer-events: none;
   position: relative;
-  z-index: 1;               /* canvas fölött */
+  z-index: 1;               
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;             /* középre igazítja függőlegesen is */
+  height: 100%;             
 }
 .logo-container img {
-  width: 200px;             /* ízlés szerint állítsd */
+  width: 200px;             
 }
 
 
@@ -231,7 +229,7 @@ p {
   width: 200px;
 }
 
-/* End Hero Section */
+
 
 #Portfólió {
   width: 100%;
@@ -255,7 +253,7 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* átlátszó fekete */
+  background: rgba(0, 0, 0, 0.5); 
   color: white;
   display: flex;
   flex-direction: column;
@@ -282,7 +280,7 @@ p {
 }
 
 
-/* Footer */
+
 #footer {
 	background-color: #131e29;
 }
@@ -298,31 +296,12 @@ p {
   padding: 0;
 }
 
-/*
-#footer .social-icon {
-	display: flex;
-	margin-bottom: 30px;
-}
-#footer .social-item {
-	height: 50px;
-	width: 50px;
-	margin: 0 5px;
-}
-#footer .social-item img {
-	filter: grayscale(1);
-	transition: 0.3s ease filter;
-}
-#footer .social-item:hover img {
-	filter: grayscale(0);
-}
-	*/
+
 #footer p {
 	color: white;
 	font-size: 1.3rem;
 }
-/* End Footer */
 
-/* Keyframes */
 @keyframes hamburger_puls {
 	0% {
 		opacity: 1;
@@ -354,31 +333,29 @@ p {
 		font-weight: 500;
 	}
 }
-/* End Keyframes */
 
-/* Media Query For Tablet */
 @media only screen and (min-width: 768px) {
 	
 	h1.section-title {
 		font-size: 6rem;
 	}
 
-	/* Hero */
+	
 	#hero h1 {
 		font-size: 4rem;
 	}
-	/* End Hero */
+	
 
-	/* Services Section */
+	
 	#Portfólió .service-bottom .service-item {
 		flex-basis: 45%;
 		margin: 2.5%;
 	}
-	/* End Services Section */
+	
 
 	
 
-	/* About */
+	
 	#Rólunk .about {
 		flex-direction: row;
 	}
@@ -401,9 +378,7 @@ p {
 	#Rólunk .col-right h1 {
 		text-align: left;
 	}
-	/* End About */
-
-	/* contact  */
+	
 	#Kapcsolat .contact {
 		flex-direction: column;
 		padding: 100px 0;
@@ -435,13 +410,13 @@ p {
 		text-align: left;
 		padding-left: 20px;
 	}
-	/* End contact  */
+	
 }
-/* End Media Query For Tablet */
 
-/* Media Query For Desktop */
+
+
 @media only screen and (min-width: 1200px) {
-	/* header */
+	
 	#header .hamburger {
 		display: none;
 	}
@@ -461,11 +436,11 @@ p {
 	#header .nav-list ul a:after {
 		display: none;
 	}
-	/* End header */
+	
 
 	#services .service-bottom .service-item {
 		flex-basis: 22%;
 		margin: 1.5%;
 	}
 }
-/* End  Media Query For Desktop */
+

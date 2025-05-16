@@ -1,20 +1,9 @@
-/* -----------------------------------------------
-/* How to use? : Check the GitHub README
-/* ----------------------------------------------- */
 
-/* To load a config file (particles.json) you need to host this demo (MAMP/WAMP/local)... */
-/*
-particlesJS.load('particles-js', 'particles.json', function() {
-  console.log('particles.js loaded - callback');
-});
-*/
-
-/* Otherwise just put the config content (json): */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
     e.preventDefault();
     const target = document.querySelector(this.getAttribute('href'));
-    const yOffset = -60; // ha a fixed header eltakar
+    const yOffset = -60; // 
     const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
 
     window.scrollTo({ top: y, behavior: 'smooth' });
