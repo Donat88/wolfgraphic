@@ -312,7 +312,7 @@ p {
 				display: block;
 				height: 100%;
 				left: 0;
-				opacity: 0.85;
+				opacity: 0;
 				position: absolute;
 				width: 100%;
 				z-index: 2;
@@ -331,7 +331,7 @@ p {
 			}
 
 			.tiles article:hover:before {
-				opacity: 0;
+				opacity: 0.85;
 			}
 
 			.tiles article.is-transitioning {
@@ -351,27 +351,27 @@ p {
 			}
 
 			.tiles article:nth-child(6n - 5):before {
-				background-color: #6fc3df;
+				background-color: #131e29;
 			}
 
 			.tiles article:nth-child(6n - 4):before {
-				background-color: #8d82c4;
+				background-color: #131e29;
 			}
 
 			.tiles article:nth-child(6n - 3):before {
-				background-color: #ec8d81;
+				background-color: #131e29;
 			}
 
 			.tiles article:nth-child(6n - 2):before {
-				background-color: #e7b788;
+				background-color: #131e29;
 			}
 
 			.tiles article:nth-child(6n - 1):before {
-				background-color: #8ea9e8;
+				background-color: #131e29;
 			}
 
 			.tiles article:nth-child(6n):before {
-				background-color: #87c5a4;
+				background-color: #131e29;
 			}
 
 		@media screen and (max-width: 1280px) {
