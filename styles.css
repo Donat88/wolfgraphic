@@ -187,12 +187,41 @@ p {
   background: url('/img/wg_background.jpg') center/cover no-repeat;
   overflow: hidden;         
 }
-.divider {
+.flex-container {
+  display: flex;
   width: 100%;
-  height: 50px;
+  height: 60px;
   background-color: #131e29;
+  background: linear-gradient(to right, #00b5e2, #131e29);
   margin: 0;
 }
+
+.flex-content-right {
+	clip-path: polygon(0 0, 50% 0%, 40% 100%, 0 100%);
+  width: 100%;
+  height: 60px;
+  background-color: #131e29;
+  margin: 0; 
+  justify-content: center;
+}
+
+.flex-content-left {
+	clip-path: polygon(0 0, 40% 0%, 50% 100%, 0 100%);
+  width: 100%;
+  height: 60px;
+  background-color: #131e29;
+  margin: 0; 
+  justify-content: center;
+}
+
+/*
+h2 {
+	display: block;
+	font-family: Jost;
+	color: #fff;
+	font-size: 4rem;
+}
+	*/
 
 #particles-js {
   position: absolute;
@@ -228,7 +257,6 @@ p {
   transform: translate(-50%, -50%);
   width: 200px;
 }
-
 
 
 #Portfólió {
@@ -280,12 +308,31 @@ p {
 			
 
 			.tiles article header {
-				position: relative;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				text-align: center;
+				width: 100%;
 				z-index: 3;
+				opacity: 0;
+				transition: opacity 0.3s ease;
 			}
 
-			.tiles article h3 {
-				font-size: 1.75em;
+			.tiles article header h3 a {
+				font-family: Jost;
+				color: #fff !important;
+				margin: 0;
+				padding: 0;
+				font-size: 2rem;
+				line-height: 1.2;
+			}
+			.tiles article:hover header {
+				opacity: 1;
+			}
+
+			.link {
+				text-decoration: none;
 			}
 
 				.tiles article h3 a:hover {
@@ -351,27 +398,27 @@ p {
 			}
 
 			.tiles article:nth-child(6n - 5):before {
-				background-color: #131e29;
+				background: radial-gradient(circle at center, #00b5e2, #131e29);
 			}
 
 			.tiles article:nth-child(6n - 4):before {
-				background-color: #131e29;
+				background: radial-gradient(circle at center, #00b5e2, #131e29);
 			}
 
 			.tiles article:nth-child(6n - 3):before {
-				background-color: #131e29;
+				background: radial-gradient(circle at center, #00b5e2, #131e29);
 			}
 
 			.tiles article:nth-child(6n - 2):before {
-				background-color: #131e29;
+				background: radial-gradient(circle at center, #00b5e2, #131e29);
 			}
 
 			.tiles article:nth-child(6n - 1):before {
-				background-color: #131e29;
+				background: radial-gradient(circle at center, #00b5e2, #131e29);
 			}
 
 			.tiles article:nth-child(6n):before {
-				background-color: #131e29;
+				background: radial-gradient(circle at center, #00b5e2, #131e29);
 			}
 
 		@media screen and (max-width: 1280px) {
