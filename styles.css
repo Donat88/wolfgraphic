@@ -471,6 +471,10 @@ h2 {
 	clip-path: polygon(0 0, 70% 0%, 60% 100%, 0 100%);
 	background-color: #131e29; }
 
+	.flex-content-left {
+	clip-path: polygon(0 0, 60% 0%, 70% 100%, 0 100%);
+	background-color: #131e29; }
+
 		}
 		
 
