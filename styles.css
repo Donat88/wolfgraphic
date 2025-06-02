@@ -205,6 +205,7 @@ p {
   justify-content: center;
 }
 
+
 .flex-content-left {
 	clip-path: polygon(0 0, 40% 0%, 50% 100%, 0 100%);
   width: 100%;
@@ -465,6 +466,10 @@ h2 {
 					height: 20em;
 					width: 100% !important;
 				}
+
+				.flex-content-right {
+	clip-path: polygon(0 0, 70% 0%, 60% 100%, 0 100%);
+	background-color: #131e29; }
 
 		}
 		
