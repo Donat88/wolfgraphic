@@ -633,7 +633,7 @@ background-position: right;
     position: relative !important;
     clip-path: none !important;
     width: 100% !important;
-    height: 40vh !important;
+    height: 70vh !important;
     background: url('img/WG_about_bg_mobile.jpg')
                 no-repeat right center/cover;
     background-attachment: scroll !important;
