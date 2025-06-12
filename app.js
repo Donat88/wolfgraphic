@@ -138,3 +138,13 @@ hamburger.addEventListener('click', () => {
   mobileMenu.classList.toggle('active');
 });
 
+document
+  .querySelectorAll('.nav-list ul li a')
+  .forEach(link => {
+    link.addEventListener('click', () => {
+      // ha valamelyik menüpontra kattintottunk, zárjuk be a menüt
+      hamburger.classList.remove('active');
+      mobileMenu.classList.remove('active');
+    });
+  });
+

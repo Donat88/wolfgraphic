@@ -3,17 +3,15 @@
 	margin: 0;
 	box-sizing: border-box;
 }
-/*
-#particles-js {
-	height: 100%;
-	overflow: visible;
-}
-	*/
-html {
+
+html, body {
+	margin: 0;
+	padding: 0;
 	font-size: 10px;
 	font-family: 'Jost', sans-serif;
-	scroll-behavior: smooth;
+	
 }
+
 a {
 	text-decoration: none;
 }
@@ -89,7 +87,6 @@ p {
 	justify-content: center;
 	align-items: center;
 	z-index: 1;
-	overflow-x: hidden;
 	transition: 0.5s ease left;
 }
 #header .nav-list ul.active {
@@ -181,11 +178,11 @@ p {
 
 
 #hero {
-  position: relative;      
+  position: relative;
   width: 100%;
   height: 100vh;            
   background: url('/img/wg_background.jpg') center/cover no-repeat;
-  overflow: hidden;         
+  
 }
 .flex-container {
   display: flex;
@@ -301,7 +298,6 @@ h2 {
 			height: 40vh;
 			max-height: 40em;
 			min-height: 23em;
-			overflow: hidden;
 			position: relative;
 			width: 40%;
 		}
@@ -478,61 +474,13 @@ h2 {
 		}
 		
 
-/*
-.portfolio-item {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
 
-.portfolio-item img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.portfolio-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); 
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.portfolio-item:hover .portfolio-overlay {
-  opacity: 1;
-}
-
-.portfolio-overlay h2 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-.portfolio-overlay p {
-  font-size: 1.6rem;
-  max-width: 600px;
-}
-*/
-
-
-
-/* a konténer, ahogy korábban */
 
 .diag-split .diag-container {
   position: relative;
   width: 100%;
   height: 100vh;        /* vagy amilyen magasra szeretnéd */
-  overflow: hidden;    /* a kilógó részeket így eltüntetjük */
+  
 }
 
 /* ====================================================
@@ -602,7 +550,7 @@ background-position: right;
   background:
     /* háttérkép + rá egy overlay gradient */
     radial-gradient(circle at center,
-      rgba(0, 0, 0, 0.6) 100%,
+      rgba(0, 181, 226, 0.6) 100%,
       rgba(0, 0, 0, 1) 100%),
     url('img/WG_contact_bg.jpg') center/cover no-repeat;
   background-blend-mode: overlay;
@@ -652,7 +600,7 @@ background-position: right;
 /* mezők stílusa */
 #Kapcsolat .contact-form .field {
   margin-bottom: 1.5rem;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 #Kapcsolat .contact-form .field input,
@@ -671,17 +619,17 @@ background-position: right;
 /* küldés gomb */
 #Kapcsolat .contact-form .poly-btn {
   align-self: flex-start;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.8);
   color: #fff;
   border: 3px solid #00b5e2;
-  border-radius: 25px;
   padding: 1rem 2rem;
   font-size: 1.6rem;
   transition: background-color .3s;
 }
 
 #Kapcsolat .contact-form .poly-btn:hover {
-  background: #008aae;
+  background: #00b5e2;
+  color: #131e29;
 }
 
 /* ───────────────────────────────────────────────────────────────────
@@ -693,7 +641,7 @@ background-position: right;
   flex-direction: column;
   justify-content: center;     /* itt is középre igazítjuk a tartalmat */
   padding: 3rem;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.8);
   height: 350px;
   clip-path: polygon(
     0%   0%,
@@ -792,6 +740,7 @@ background-position: right;
     width: 100%;
     padding: 1.5rem;
     text-align: center;
+	clip-path: none;
   }
   #Kapcsolat .contact-info ul li {
     display: flex;
@@ -814,10 +763,9 @@ background-position: right;
 
 #Kapcsolat .contact-form .poly-btn {
   align-self: center;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.8);
   color: #fff;
   border: 3px solid #00b5e2;
-  border-radius: 25px;
   padding: 1rem 2rem;
   font-size: 1.6rem;
   transition: background-color .3s;
@@ -987,4 +935,5 @@ background-position: right;
 		margin: 1.5%;
 	}
 }
+
 
