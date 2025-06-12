@@ -602,7 +602,7 @@ background-position: right;
   background:
     /* háttérkép + rá egy overlay gradient */
     radial-gradient(circle at center,
-      rgba(0, 181, 226, 0.2) 30%,
+      rgba(0, 0, 0, 0.6) 100%,
       rgba(0, 0, 0, 1) 100%),
     url('img/WG_contact_bg.jpg') center/cover no-repeat;
   background-blend-mode: overlay;
@@ -695,6 +695,12 @@ background-position: right;
   padding: 3rem;
   background-color: rgba(0, 0, 0, 0.6);
   height: 350px;
+  clip-path: polygon(
+    0%   0%,
+    70%  0%,
+    50% 100%,
+    0%  100%
+  );
 }
 
 #Kapcsolat .contact-info h2 {
