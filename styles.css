@@ -593,6 +593,139 @@ background-position: right;
   z-index: 1;
 }
 
+/* ───────────────────────────────────────────────────────────────────
+   Kapcsolat szekció
+─────────────────────────────────────────────────────────────────── */
+#Kapcsolat.contact-split {
+  position: relative;
+  padding: 6rem 0;
+  background:
+    /* háttérkép + rá egy overlay gradient */
+    radial-gradient(circle at center,
+      rgba(0, 181, 226, 0.2) 30%,
+      rgba(0, 0, 0, 1) 100%),
+    url('img/WG_contact_bg.jpg') center/cover no-repeat;
+  background-blend-mode: overlay;
+}
+
+/* függőleges elválasztó vonal */
+#Kapcsolat.contact-split::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  bottom: 10%;
+  left: 50%;
+  width: 2px;
+  background: #fff;
+  z-index: 3;
+}
+
+/* a két panelt tartalmazó flex-konténer */
+#Kapcsolat .contact-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;         /* magukat a paneleket középre húzza */
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+/* ───────────────────────────────────────────────────────────────────
+   Űrlap panel (bal oldal)
+─────────────────────────────────────────────────────────────────── */
+#Kapcsolat .contact-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;     /* a benne lévő h2 / form is középre kerül */
+  padding: 2rem;
+}
+
+#Kapcsolat .contact-form h2 {
+  color: #fff;
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+/* mezők stílusa */
+#Kapcsolat .contact-form .field {
+  margin-bottom: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+#Kapcsolat .contact-form .field input,
+#Kapcsolat .contact-form .field textarea {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.6rem;
+  color: #fff;
+  background: transparent;
+  border: 3px solid #00b5e2;
+  outline: none;
+  resize: none;
+  box-sizing: border-box;
+}
+
+/* küldés gomb */
+#Kapcsolat .contact-form .poly-btn {
+  align-self: flex-start;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border: 3px solid #00b5e2;
+  border-radius: 25px;
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  transition: background-color .3s;
+}
+
+#Kapcsolat .contact-form .poly-btn:hover {
+  background: #008aae;
+}
+
+/* ───────────────────────────────────────────────────────────────────
+   Elérhetőségek panel (jobb oldal)
+─────────────────────────────────────────────────────────────────── */
+#Kapcsolat .contact-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;     /* itt is középre igazítjuk a tartalmat */
+  padding: 3rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 350px;
+}
+
+#Kapcsolat .contact-info h2 {
+  color: #fff;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+/* lista stílusok */
+#Kapcsolat .contact-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#Kapcsolat .contact-info ul li {
+  display: flex;
+  align-items: center;         /* ikon + szöveg középre rendezése */
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+}
+
+/* ikonok mérete */
+#Kapcsolat .contact-info ul li .icon {
+  width: 3rem;
+  height: 3rem;
+  margin-right: 0.75rem;
+  object-fit: contain;
+}
+
 /* ====================================================
    4. Reszponzív – mobilra egymás alá, klippath törlése
    ==================================================== */
@@ -638,6 +771,51 @@ background-position: right;
                 no-repeat right center/cover;
     background-attachment: scroll !important;
   }
+
+  #Kapcsolat.contact-split::before {
+  z-index: -1;
+}
+#Kapcsolat .contact-container {
+    flex-direction: column;
+  }
+  #Kapcsolat .contact-split::before {
+    display: none;
+  }
+  #Kapcsolat .contact-form,
+  #Kapcsolat .contact-info {
+    width: 100%;
+    padding: 1.5rem;
+    text-align: center;
+  }
+  #Kapcsolat .contact-info ul li {
+    display: flex;
+    flex-direction: column;
+	align-items: center;
+	text-align: center;
+	margin-right: 0;
+	margin-bottom: 2;
+  }
+}
+
+#Kapcsolat .contact-info ul li .icon {
+    width: 4rem;               /* vagy auto, ha svg-t használsz */
+    height: 4rem;
+    font-size: 3rem;           /* ha font-icon */
+    margin-right: 0;           /* eltávolítjuk a jobbra tolást */
+    margin-bottom: 1rem;
+	margin-top: 1rem;
+}
+
+
+#Kapcsolat .contact-form .poly-btn {
+  align-self: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border: 3px solid #00b5e2;
+  border-radius: 25px;
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  transition: background-color .3s;
 }
 
 
