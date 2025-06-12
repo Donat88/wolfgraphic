@@ -5,8 +5,7 @@
 }
 
 html, body {
-	margin: 0;
-	padding: 0;
+
 	font-size: 10px;
 	font-family: 'Jost', sans-serif;
 	
@@ -92,6 +91,11 @@ p {
 #header .nav-list ul.active {
 	left: 0%;
 }
+
+.nav-list ul li a.active-link {
+  color: #00b5e2 !important;
+}
+
 #header .nav-list ul a {
 	font-size: 2.5rem;
 	font-weight: 500;
@@ -212,14 +216,6 @@ p {
   justify-content: center;
 }
 
-/*
-h2 {
-	display: block;
-	font-family: Jost;
-	color: #fff;
-	font-size: 4rem;
-}
-	*/
 
 #particles-js {
   position: absolute;
@@ -259,74 +255,72 @@ h2 {
 
 #Portfólió {
   width: 100%;
+  height: 100vh;            
+  background:
+    radial-gradient(circle at center,
+      rgba(0, 0, 0, 0.6) 100%,
+      rgba(0, 0, 0, 0.6) 100%),
+    url('img/wg_background.jpg') center/cover no-repeat;
+  background-blend-mode: overlay;
 }
 
 .tiles {
-		display: -moz-flex;
-		display: -webkit-flex;
-		display: -ms-flex;
-		display: flex;
-		-moz-flex-wrap: wrap;
-		-webkit-flex-wrap: wrap;
-		-ms-flex-wrap: wrap;
-		flex-wrap: wrap;
-		border-top: 0 !important;
-	}
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;               /* csempék közti távolság */
+  padding: 4rem 3rem;     /* vízszintes belső margó */
+  justify-content: center; /* középre rendezi a sort, ha nincs teljesen kitöltve */
+}
 
 		.tiles + * {
 			border-top: 0 !important;
 		}
 
-		.tiles article {
-			-moz-align-items: center;
-			-webkit-align-items: center;
-			-ms-align-items: center;
-			align-items: center;
-			display: -moz-flex;
-			display: -webkit-flex;
-			display: -ms-flex;
-			display: flex;
-			-moz-transition: -moz-transform 0.25s ease, opacity 0.25s ease, -moz-filter 1s ease, -webkit-filter 1s ease;
-			-webkit-transition: -webkit-transform 0.25s ease, opacity 0.25s ease, -webkit-filter 1s ease, -webkit-filter 1s ease;
-			-ms-transition: -ms-transform 0.25s ease, opacity 0.25s ease, -ms-filter 1s ease, -webkit-filter 1s ease;
-			transition: transform 0.25s ease, opacity 0.25s ease, filter 1s ease, -webkit-filter 1s ease;
-			padding: 4em 4em 2em 4em ;
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: cover;
-			cursor: default;
-			height: 40vh;
-			max-height: 40em;
-			min-height: 23em;
-			position: relative;
-			width: 40%;
-		}
+.tiles article {
+  position: relative;
+  flex: 0 0 calc((100% - 4rem) / 3);
+    /* (100% szélesség – 2× gap) / 3 darab = mindegyik ugyanakkora */
+  height: 25rem;           /* ha fix magasság kell; vagy használj aspect-ratio-t */
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: transform .3s ease, box-shadow .3s ease;
+  overflow: hidden;
+}
 
 			
 
-			.tiles article header {
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-				text-align: center;
-				width: 100%;
-				z-index: 3;
-				opacity: 0;
-				transition: opacity 0.3s ease;
-			}
+.tiles article header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  z-index: 2;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  text-align: center;
+  pointer-events: none;               /* hogy az egérkattintás a tile-t ragadja, ne a headert */
+}
 
-			.tiles article header h3 a {
-				font-family: Jost;
-				color: #fff !important;
-				margin: 0;
-				padding: 0;
-				font-size: 2rem;
-				line-height: 1.2;
-			}
-			.tiles article:hover header {
-				opacity: 1;
-			}
+			.tiles article:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+}
+
+.tiles article:hover header {
+  opacity: 0;
+}
+.tiles article header h3 a {
+  color: #fff !important;
+  font-size: 1.8rem;
+  line-height: 1.2;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+  display: block;
+}
 
 			.link {
 				text-decoration: none;
@@ -346,37 +340,35 @@ h2 {
 				z-index: 4;
 			}
 
-			.tiles article:before {
-				-moz-transition: opacity 0.5s ease;
-				-webkit-transition: opacity 0.5s ease;
-				-ms-transition: opacity 0.5s ease;
-				transition: opacity 0.5s ease;
-				bottom: 0;
-				content: '';
-				display: block;
-				height: 100%;
-				left: 0;
-				opacity: 0;
-				position: absolute;
-				width: 100%;
-				z-index: 2;
-			}
+.tiles article::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 181, 226, 0.6) 0%,
+    rgba(19, 30, 41, 0.8) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+  transition: background 0.3s ease;
+}
 
-			.tiles article:after {
-				background-color: rgba(36, 41, 67, 0.25);
-				content: '';
-				display: block;
-				height: 100%;
-				left: 0;
-				position: absolute;
-				top: 0;
-				width: 100%;
-				z-index: 1;
-			}
+.tiles article:after {
+	background-color: transparent !important;
+	content: '';
+	display: block;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+}
 
-			.tiles article:hover:before {
-				opacity: 0.85;
-			}
+.tiles article:hover::before {
+  opacity: 0;
+}
 
 			.tiles article.is-transitioning {
 				-moz-transform: scale(0.95);
@@ -390,33 +382,7 @@ h2 {
 				opacity: 0;
 			}
 
-			.tiles article:nth-child(4n - 1), .tiles article:nth-child(4n - 2) {
-				width: 60%;
-			}
-
-			.tiles article:nth-child(6n - 5):before {
-				background: radial-gradient(circle at center, #00b5e2, #131e29);
-			}
-
-			.tiles article:nth-child(6n - 4):before {
-				background: radial-gradient(circle at center, #00b5e2, #131e29);
-			}
-
-			.tiles article:nth-child(6n - 3):before {
-				background: radial-gradient(circle at center, #00b5e2, #131e29);
-			}
-
-			.tiles article:nth-child(6n - 2):before {
-				background: radial-gradient(circle at center, #00b5e2, #131e29);
-			}
-
-			.tiles article:nth-child(6n - 1):before {
-				background: radial-gradient(circle at center, #00b5e2, #131e29);
-			}
-
-			.tiles article:nth-child(6n):before {
-				background: radial-gradient(circle at center, #00b5e2, #131e29);
-			}
+			
 
 		@media screen and (max-width: 1280px) {
 
@@ -433,6 +399,7 @@ h2 {
 
 			.tiles article {
 				width: 50% !important;
+				flex: 0 0 calc((100% - 2rem) / 2);
 			}
 
 		}
@@ -444,6 +411,7 @@ h2 {
 				height: 16em;
 				max-height: none;
 				min-height: 0;
+				flex: 0 0 100%;
 			}
 
 				.tiles article h3 {
