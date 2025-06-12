@@ -405,6 +405,11 @@ p {
 		}
 
 		@media screen and (max-width: 736px) {
+			#Portfólió {
+    height: auto !important;
+    min-height: 0 !important;
+    padding-bottom: 2rem;
+			}
 
 			.tiles article {
 				padding: 3em 1.5em 1em 1.5em ;
@@ -417,19 +422,34 @@ p {
 				.tiles article h3 {
 					font-size: 1.5em;
 				}
-
+		
 		}
 
 		@media screen and (max-width: 480px) {
 
-			.tiles {
-				display: block;
-			}
+			#Portfólió {
+    height: auto !important;
+    min-height: 0 !important;
+    padding-bottom: 2rem; /* legyen egy kis extra alul is */
+  }
 
-				.tiles article {
-					height: 20em;
-					width: 100% !important;
-				}
+  /* 1 oszlopos csempék, kis hézaggal */
+  .tiles {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .tiles article {
+    flex: none;
+    width: 100% !important;
+    aspect-ratio: 16/9;
+    height: auto !important;
+  }
+
+
+
 
 				.flex-content-right {
 	clip-path: polygon(0 0, 70% 0%, 60% 100%, 0 100%);
