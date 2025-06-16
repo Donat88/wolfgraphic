@@ -39,9 +39,6 @@ p {
 	letter-spacing: 0.2rem;
 	text-align: center;
 }
-.section-title span {
-	color: crimson;
-}
 
 
 .brand img {
@@ -267,20 +264,19 @@ p {
 .tiles {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;               /* csempék közti távolság */
-  padding: 4rem 3rem;     /* vízszintes belső margó */
-  justify-content: center; /* középre rendezi a sort, ha nincs teljesen kitöltve */
+  gap: 2rem;
+  padding: 4rem 3rem;
+  justify-content: center;
 }
 
-		.tiles + * {
-			border-top: 0 !important;
-		}
+.tiles + * {
+	border-top: 0 !important;
+}
 
 .tiles article {
   position: relative;
   flex: 0 0 calc((100% - 4rem) / 3);
-    /* (100% szélesség – 2× gap) / 3 darab = mindegyik ugyanakkora */
-  height: 25rem;           /* ha fix magasság kell; vagy használj aspect-ratio-t */
+  height: 25rem;
   overflow: hidden;
   border-radius: 1rem;
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
@@ -303,10 +299,10 @@ p {
   opacity: 1;
   transition: opacity 0.3s ease;
   text-align: center;
-  pointer-events: none;               /* hogy az egérkattintás a tile-t ragadja, ne a headert */
+  pointer-events: none;
 }
 
-			.tiles article:hover {
+.tiles article:hover {
   transform: translateY(-5px) scale(1.02);
   box-shadow: 0 12px 24px rgba(0,0,0,0.3);
 }
@@ -322,23 +318,23 @@ p {
   display: block;
 }
 
-			.link {
-				text-decoration: none;
-			}
+.link {
+	text-decoration: none;
+}
 
-				.tiles article h3 a:hover {
-					color: inherit !important;
-				}
+.tiles article h3 a:hover {
+	color: inherit !important;
+}
 
-			.tiles article .link.primary {
-				border: 0;
-				height: 100%;
-				left: 0;
-				position: absolute;
-				top: 0;
-				width: 100%;
-				z-index: 4;
-			}
+.tiles article .link.primary {
+	border: 0;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 4;
+}
 
 .tiles article::before {
   content: '';
@@ -370,70 +366,69 @@ p {
   opacity: 0;
 }
 
-			.tiles article.is-transitioning {
-				-moz-transform: scale(0.95);
-				-webkit-transform: scale(0.95);
-				-ms-transform: scale(0.95);
-				transform: scale(0.95);
-				-moz-filter: blur(0.5em);
-				-webkit-filter: blur(0.5em);
-				-ms-filter: blur(0.5em);
-				filter: blur(0.5em);
-				opacity: 0;
-			}
+.tiles article.is-transitioning {
+	-moz-transform: scale(0.95);
+	-webkit-transform: scale(0.95);
+	-ms-transform: scale(0.95);
+	transform: scale(0.95);
+	-moz-filter: blur(0.5em);
+	-webkit-filter: blur(0.5em);
+	-ms-filter: blur(0.5em);
+	filter: blur(0.5em);
+	opacity: 0;
+}
 
 			
 
-		@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1280px) {
 
-			.tiles article {
-				padding: 4em 3em 2em 3em ;
-				height: 30vh;
-				max-height: 30em;
-				min-height: 20em;
-			}
+	.tiles article {
+		padding: 4em 3em 2em 3em ;
+		height: 30vh;
+		max-height: 30em;
+		min-height: 20em;
+	}
 
-		}
+}
 
-		@media screen and (max-width: 980px) {
+@media screen and (max-width: 980px) {
 
-			.tiles article {
-				width: 50% !important;
-				flex: 0 0 calc((100% - 2rem) / 2);
-			}
+	.tiles article {
+		width: 50% !important;
+		flex: 0 0 calc((100% - 2rem) / 2);
+	}
 
-		}
+}
 
-		@media screen and (max-width: 736px) {
-			#Portfólió {
+@media screen and (max-width: 736px) {
+	#Portfólió {
     height: auto !important;
     min-height: 0 !important;
     padding-bottom: 2rem;
 			}
 
-			.tiles article {
-				padding: 3em 1.5em 1em 1.5em ;
-				height: 16em;
-				max-height: none;
-				min-height: 0;
-				flex: 0 0 100%;
-			}
+	.tiles article {
+		padding: 3em 1.5em 1em 1.5em ;
+		height: 16em;
+		max-height: none;
+		min-height: 0;
+		flex: 0 0 100%;
+	}
 
-				.tiles article h3 {
-					font-size: 1.5em;
-				}
+	.tiles article h3 {
+		font-size: 1.5em;
+	}
 		
-		}
+}
 
-		@media screen and (max-width: 480px) {
+@media screen and (max-width: 480px) {
 
-			#Portfólió {
+	#Portfólió {
     height: auto !important;
     min-height: 0 !important;
-    padding-bottom: 2rem; /* legyen egy kis extra alul is */
+    padding-bottom: 2rem;
   }
 
-  /* 1 oszlopos csempék, kis hézaggal */
   .tiles {
     display: flex;
     flex-direction: column;
@@ -467,13 +462,11 @@ p {
 .diag-split .diag-container {
   position: relative;
   width: 100%;
-  height: 100vh;        /* vagy amilyen magasra szeretnéd */
+  height: 100vh;
   
 }
 
-/* ====================================================
-   2. Bal oldal – szöveg panel (sötét, fehér szöveg)
-   ==================================================== */
+
 .diag-split .diag-text {
   position: absolute;
   top: 0; left: 0;
@@ -508,9 +501,7 @@ p {
 	text-transform: uppercase;
 }
 
-/* ====================================================
-   3. Jobb oldal – kép panel (fehér panel nélkül)
-   ==================================================== */
+
 .diag-split .diag-image {
   position: absolute;
   top: 0; left: 0;
@@ -529,14 +520,11 @@ background-position: right;
   z-index: 1;
 }
 
-/* ───────────────────────────────────────────────────────────────────
-   Kapcsolat szekció
-─────────────────────────────────────────────────────────────────── */
+
 #Kapcsolat.contact-split {
   position: relative;
   padding: 6rem 0;
   background:
-    /* háttérkép + rá egy overlay gradient */
     radial-gradient(circle at center,
       rgba(0, 181, 226, 0.6) 100%,
       rgba(0, 0, 0, 1) 100%),
@@ -544,7 +532,6 @@ background-position: right;
   background-blend-mode: overlay;
 }
 
-/* függőleges elválasztó vonal */
 #Kapcsolat.contact-split::before {
   content: '';
   position: absolute;
@@ -556,26 +543,24 @@ background-position: right;
   z-index: 3;
 }
 
-/* a két panelt tartalmazó flex-konténer */
+
 #Kapcsolat .contact-container {
   position: relative;
   z-index: 2;
   display: flex;
-  align-items: center;         /* magukat a paneleket középre húzza */
+  align-items: center;
   justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
   gap: 2rem;
 }
 
-/* ───────────────────────────────────────────────────────────────────
-   Űrlap panel (bal oldal)
-─────────────────────────────────────────────────────────────────── */
+
 #Kapcsolat .contact-form {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;     /* a benne lévő h2 / form is középre kerül */
+  justify-content: center;
   padding: 2rem;
 }
 
@@ -585,7 +570,7 @@ background-position: right;
   margin-bottom: 1.5rem;
 }
 
-/* mezők stílusa */
+
 #Kapcsolat .contact-form .field {
   margin-bottom: 1.5rem;
   background-color: rgba(0, 0, 0, 0.8);
@@ -604,7 +589,7 @@ background-position: right;
   box-sizing: border-box;
 }
 
-/* küldés gomb */
+
 #Kapcsolat .contact-form .poly-btn {
   align-self: flex-start;
   background-color: rgba(0, 0, 0, 0.8);
@@ -620,14 +605,11 @@ background-position: right;
   color: #131e29;
 }
 
-/* ───────────────────────────────────────────────────────────────────
-   Elérhetőségek panel (jobb oldal)
-─────────────────────────────────────────────────────────────────── */
 #Kapcsolat .contact-info {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;     /* itt is középre igazítjuk a tartalmat */
+  justify-content: center;
   padding: 3rem;
   background-color: rgba(0, 0, 0, 0.8);
   height: 350px;
@@ -645,7 +627,7 @@ background-position: right;
   margin-bottom: 2rem;
 }
 
-/* lista stílusok */
+
 #Kapcsolat .contact-info ul {
   list-style: none;
   padding: 0;
@@ -654,13 +636,12 @@ background-position: right;
 
 #Kapcsolat .contact-info ul li {
   display: flex;
-  align-items: center;         /* ikon + szöveg középre rendezése */
+  align-items: center;
   color: #fff;
   font-size: 2rem;
   margin-bottom: 1.2rem;
 }
 
-/* ikonok mérete */
 #Kapcsolat .contact-info ul li .icon {
   width: 3rem;
   height: 3rem;
@@ -668,42 +649,39 @@ background-position: right;
   object-fit: contain;
 }
 
-/* ====================================================
-   4. Reszponzív – mobilra egymás alá, klippath törlése
-   ==================================================== */
+
 @media screen and (max-width: 768px) {
-  /* Konténer egymás alá */
   .diag-split .diag-container {
     display: block;
     height: auto;
   }
 
-  /* Szöveg panel: teljes szélesség, háttérkép megtartva */
+ 
   .diag-split .diag-text {
     position: relative !important;
     clip-path: none !important;
-    width: 100% !important;         /* teljes szélesség */
+    width: 100% !important;
     height: auto !important;
-    background:                       /* megtartjuk az alapszínt és a képet */
+    background:
       #131e29 url('img/wg_background.jpg') no-repeat center center/cover;
     padding: 3rem 1.5rem;
-    text-align: left;                /* vagy center, ha jobban tetszik */
+    text-align: left;
   }
   .diag-split .diag-text h2 {
     font-size: 2.8rem;
-	width: 100% !important;         /* teljes szélesség */
+	width: 100% !important;
     height: auto !important;
     margin-bottom: 1rem;
   }
   .diag-split .diag-text p {
     font-size: 1.6rem;
-	width: 100% !important;         /* teljes szélesség */
+	width: 100% !important;
     height: auto !important;
     line-height: 2.4rem;
     margin-bottom: 1rem;
   }
 
-  /* Kép panel alulra: csak jobb részlet, fix magasság */
+
   .diag-split .diag-image {
     position: relative !important;
     clip-path: none !important;
@@ -740,10 +718,10 @@ background-position: right;
   }
 
 #Kapcsolat .contact-info ul li .icon {
-    width: 4rem;               /* vagy auto, ha svg-t használsz */
+    width: 4rem;
     height: 4rem;
-    font-size: 3rem;           /* ha font-icon */
-    margin-right: 0;           /* eltávolítjuk a jobbra tolást */
+    font-size: 3rem;
+    margin-right: 0;
     margin-bottom: 1rem;
 	margin-top: 1rem;
 }
@@ -792,27 +770,7 @@ background-position: right;
 		transform: scale(1.4);
 	}
 }
-@keyframes text_reveal_box {
-	50% {
-		width: 100%;
-		left: 0;
-	}
-	100% {
-		width: 0;
-		left: 100%;
-	}
-}
-@keyframes text_reveal {
-	100% {
-		color: white;
-	}
-}
-@keyframes text_reveal_name {
-	100% {
-		color: crimson;
-		font-weight: 500;
-	}
-}
+
 
 @media only screen and (min-width: 768px) {
 	
@@ -849,7 +807,7 @@ background-position: right;
 		top: 34px;
 		height: 98%;
 		width: 98%;
-		border: 10px solid crimson;
+	
 	}
 	#Rólunk .col-right {
 		text-align: left;

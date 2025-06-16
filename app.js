@@ -53,26 +53,23 @@ document.addEventListener('DOMContentLoaded', () => {
   const navLinks     = document.querySelectorAll('.nav-list ul li a');
   const sections     = document.querySelectorAll('section[id]');
 
-  // 2) Hamburger nyit/csuk
+ 
   hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
     mobileMenu.classList.toggle('active');
   });
 
-  // 3) Smooth scroll + automatikus menü-becsukás
   navLinks.forEach(link => {
     link.addEventListener('click', e => {
       e.preventDefault();
       const target = document.querySelector(link.getAttribute('href'));
       const y = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
       window.scrollTo({ top: y, behavior: 'smooth' });
-      // becsukjuk a hamburger-menüt
       hamburger.classList.remove('active');
       mobileMenu.classList.remove('active');
     });
   });
 
-  // 4) Scroll-spy: aktív menüpont kék színnel
   function onScroll() {
     const scrollPos = window.pageYOffset + headerHeight + 5;
     sections.forEach(sec => {
